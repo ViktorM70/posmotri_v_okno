@@ -77,16 +77,20 @@ ol {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 225px;
   gap: 5px;
+  border: none;
 }
 
 .search-form__label {
   display: inline;
   width: fit-content;
+  margin-right: 5px; 
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
 }
 
 .search-form__fieldset-title {
@@ -116,7 +120,7 @@ ol {
   border-bottom: 1px solid #FFF;
   border-right: none;
   color: rgba(255, 255, 255, 0.70);
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -165,7 +169,7 @@ input[type='checkbox']:checked + span::after {
   cursor: pointer;
   color: #FFF;
   text-align: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -180,22 +184,26 @@ input[type='checkbox']:checked + span::after {
   text-decoration: underline;
 }
 
+.button:focus {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
+}
+
 .search-form__submit-button {
   align-self: self-end;
   width: 194px;
   height: 34px;
 }
 
-fieldset {
-  border: none;
-}
-
 .content__details { 
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 534px;
+  width: 399px;
 }
 
 .title {
+  align-self: start;
   color: #FFF;
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
@@ -204,6 +212,8 @@ fieldset {
   line-height: 94%;
   text-transform: uppercase;
   margin-bottom: 26px;
+  width: 260px;
+  height: 210px;
 }
 
 .content__accent {
@@ -225,7 +235,7 @@ fieldset {
 .content__list-item {
   padding: 2px;
   margin-bottom: 30px;
-  
+  height: 103px;
 }
 
 .content__video-card {
@@ -259,7 +269,10 @@ fieldset {
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
+  width: 194px;
+  height: 103px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .content__card-link {
@@ -281,7 +294,7 @@ fieldset {
 }
 
 .content__card-link:focus-visible{
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
 }
 
 .more-button {
